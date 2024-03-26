@@ -27,4 +27,4 @@ spec:
             - name: SERVICE_A_HOST
               value: "http://promotion-service.my-application.svc.cluster.local"
             - name: SERVICE_A_API_GREETING
-              value: "service/greeting"    
+              value: "/service/greeting"    
