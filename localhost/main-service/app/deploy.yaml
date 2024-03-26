@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: main-service
+  name: main-service
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: main-service
+  template:
+    metadata:
+      labels:
+        app: main-service
+    spec:
+      containers:
+        - image: denitiawan/argocd-springboot3-service:latest
+          name: main-service
+          ports:
+            - containerPort: 80
+          env:
+            - name: APP_PORT
+              value: "80"
+            - name: APP_NAME
+              value: "MAIN-SERVICE"

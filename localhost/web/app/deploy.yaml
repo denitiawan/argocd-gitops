@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: reactjs-web
+  name: reactjs-web
+  namespace: my-application
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: reactjs-web
+  template:
+    metadata:
+      labels:
+        app: reactjs-web
+    spec:
+      containers:
+        - image: denitiawan/argocd-reactjs-web:latest
+          name: reactjs-web
+          ports:
+            - containerPort: 3000          
