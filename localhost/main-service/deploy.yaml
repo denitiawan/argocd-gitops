@@ -5,7 +5,7 @@ metadata:
     app: main-service
   name: main-service
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       app: main-service
