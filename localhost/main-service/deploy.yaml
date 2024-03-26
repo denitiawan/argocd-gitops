@@ -25,6 +25,6 @@ spec:
             - name: APP_NAME
               value: "MAIN-SERVICE"
             - name: SERVICE_A_HOST
-              value: "http://promotion.localhost:8009/"
+              value: "http://promotion-service.my-application.svc.cluster.local"
             - name: SERVICE_A_API_GREETING
               value: "service/greeting"    
