@@ -27,4 +27,4 @@ spec:
             - name: SERVICE_A_HOST
               value: "http://search.localhost:8009/"
             - name: SERVICE_A_API_GREETING
-              value: "/service/greeting"  
+              value: "service/greeting"  
