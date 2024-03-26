@@ -24,3 +24,7 @@ spec:
               value: "80"
             - name: APP_NAME
               value: "MAIN-SERVICE"
+            - name: SERVICE_A_HOST
+              value: "http://main.localhost:8009"
+            - name: SERVICE_A_API_GREETING
+              value: "/service/greeting"    
