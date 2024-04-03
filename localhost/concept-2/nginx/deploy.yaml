@@ -16,7 +16,7 @@ spec:
         app: nginx-app-2
     spec:
       containers:
-      - image: nginx-app-2
+      - image: nginx
         name: nginx-app-2
         volumeMounts:
         - name: nginx-config-app-2
