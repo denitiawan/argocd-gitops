@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: promotion-service
+  name: promotion-service
+  namespace: concept-2
+spec:
+  replicas: 10
+  selector:
+    matchLabels:
+      app: promotion-service
+  template:
+    metadata:
+      labels:
+        app: promotion-service
+    spec:
+      containers:
+        - image: denitiawan/argocd-springboot3-service:latest
+          name: promotion-service
+          ports:
+            - containerPort: 80
+          env:
+            - name: APP_PORT
+              value: "80"
+            - name: APP_NAME
+              value: "PROMOTION-SERVICE"
+            - name: SERVICE_A_HOST
+              value: "http://search-service.my-application.svc.cluster.local:80"
+            - name: SERVICE_A_API_GREETING
+              value: "/service/greeting"    
