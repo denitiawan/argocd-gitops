@@ -6,7 +6,7 @@ metadata:
   name: promotion-service
   namespace: concept-1
 spec:
-  replicas: 10
+  replicas: 1
   selector:
     matchLabels:
       app: promotion-service
