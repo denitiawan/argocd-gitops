@@ -4,6 +4,7 @@ metadata:
   labels:
     app: search-service
   name: search-service
+  namespace: concept-1
 spec:
   replicas: 1
   selector:
