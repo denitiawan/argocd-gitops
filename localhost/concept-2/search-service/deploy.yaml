@@ -29,3 +29,7 @@ spec:
               value: "http://main-service-app-2.app-2.svc.cluster.local:80"
             - name: SERVICE_A_API_GREETING
               value: "/service/greeting"    
+  # Add dependsOn to make sure the search-service-app-2 deployment waits for the main-service-app-2 service to be ready before starting.
+  dependsOn:
+    - name: main-service-app-2
+      condition: "Ready"
