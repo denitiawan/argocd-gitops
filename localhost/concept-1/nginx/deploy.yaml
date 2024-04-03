@@ -16,7 +16,7 @@ spec:
         app: nginx-concept-1
     spec:
       containers:
-      - image: nginx-concept-1
+      - image: nginx
         name: nginx-concept-1
         volumeMounts:
         - name: nginxconfig-concept-1
