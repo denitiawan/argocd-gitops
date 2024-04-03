@@ -19,10 +19,10 @@ spec:
       - image: nginx
         name: nginx
         volumeMounts:
-        - name: nginx-config
+        - name: concept-1-nginx-config
           mountPath: /etc/nginx/nginx.conf
           subPath: nginx.conf
       volumes:
-      - name: nginx-config
+      - name: concept-1-nginx-config
         configMap:
-          name: nginx-config
+          name: concept-1-nginx-config
