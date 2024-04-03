@@ -2,27 +2,27 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    app: nginx
-  name: nginx
+    app: nginx-concept-1
+  name: nginx-concept-1
   namespace: concept-1
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: nginx
+      app: nginx-concept-1
   template:
     metadata:
       labels:
-        app: nginx
+        app: nginx-concept-1
     spec:
       containers:
-      - image: nginx
-        name: nginx
+      - image: nginx-concept-1
+        name: nginx-concept-1
         volumeMounts:
-        - name: concept-1-nginx-config
+        - name: nginxconfig-concept-1
           mountPath: /etc/nginx/nginx.conf
           subPath: nginx.conf
       volumes:
-      - name: concept-1-nginx-config
+      - name: nginxconfig-concept-1
         configMap:
-          name: concept-1-nginx-config
+          name: nginxconfig-concept-1

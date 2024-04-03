@@ -2,8 +2,8 @@ apiVersion: v1
 kind: Service
 metadata:
   labels:
-    app: nginx
-  name: nginx
+    app: nginx-concept-1
+  name: nginx-concept-1
   namespace: concept-1
 spec:
   ports:
@@ -11,5 +11,5 @@ spec:
       protocol: TCP
       targetPort: 80
   selector:
-    app: nginx
+    app: nginx-concept-1
   type: LoadBalancer  
