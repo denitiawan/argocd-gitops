@@ -20,7 +20,7 @@ spec:
         name: nginx-app-2
         volumeMounts:
         - name: nginx-config-app-2
-          mountPath: /etc/nginx/nginx.conf
+          mountPath: /etc/nginx-app-2/nginx.conf
           subPath: nginx.conf
       volumes:
       - name: nginx-config-app-2
