@@ -3,8 +3,8 @@ kind: Deployment
 metadata:
   labels:
     app: nginx
-  name: nginx-concept-1  # Changed to a unique name for your deployment
-  namespace: concept-1
+  name: nginx-my-application
+  namespace: my-application
 spec:
   replicas: 1
   selector:
