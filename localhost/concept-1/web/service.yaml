@@ -4,7 +4,7 @@ metadata:
   labels:
     app: reactjs-web
   name: reactjs-web
-namespace: concept-1
+namespace: my-application
 spec:
   ports:
     - port: 3000
