@@ -2,14 +2,14 @@ apiVersion: v1
 kind: Service
 metadata:
   labels:
-    app: promotion-service
-  name: promotion-service
-  namespace: concept-2
+    app: promotion-service-app-2
+  name: promotion-service-app-2
+  namespace: app-2
 spec:
   ports:
     - port: 80
       protocol: TCP
       targetPort: 80
   selector:
-    app: promotion-service
+    app: promotion-service-app-2
   type: ClusterIP

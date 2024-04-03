@@ -2,14 +2,14 @@ apiVersion: v1
 kind: Service
 metadata:
   labels:
-    app: search-service
-  name: search-service
-  namespace: concept-2
+    app: search-service-app-2
+  name: search-service-app-2
+  namespace: app-2x
 spec:
   ports:
     - port: 80
       protocol: TCP
       targetPort: 80
   selector:
-    app: search-service
+    app: search-service-app-2
   type: ClusterIP

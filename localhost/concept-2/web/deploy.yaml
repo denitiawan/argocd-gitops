@@ -2,21 +2,21 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    app: reactjs-web
-  name: reactjs-web
-  namespace: concept-2
+    app: reactjs-web-app-2
+  name: reactjs-web-app-2
+  namespace: app-2
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: reactjs-web
+      app: reactjs-web-app-2
   template:
     metadata:
       labels:
-        app: reactjs-web
+        app: reactjs-web-app-2
     spec:
       containers:
         - image: denitiawan/argocd-reactjs-web:latest
-          name: reactjs-web
+          name: reactjs-web-app-2
           ports:
             - containerPort: 3000          

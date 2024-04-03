@@ -2,22 +2,22 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    app: search-service
-  name: search-service
-  namespace: concept-2
+    app: search-service-app-2
+  name: search-service-app-2
+  namespace: app-2
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: search-service
+      app: search-service-app-2
   template:
     metadata:
       labels:
-        app: search-service
+        app: search-service-app-2
     spec:
       containers:
         - image: denitiawan/argocd-springboot3-service:latest
-          name: search-service
+          name: search-service-app-2
           ports:
             - containerPort: 80
           env:
@@ -26,6 +26,6 @@ spec:
             - name: APP_NAME
               value: "SEARCH-SERVICE"
             - name: SERVICE_A_HOST
-              value: "http://main-service.my-application.svc.cluster.local:80"
+              value: "http://main-service-app-2.app-2.svc.cluster.local:80"
             - name: SERVICE_A_API_GREETING
               value: "/service/greeting"    
